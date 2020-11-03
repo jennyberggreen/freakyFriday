@@ -76,12 +76,56 @@
         width: 100%;
         height: 340px;
         display: flex;
+        flex-direction: column;
         background-image: url("barcode.jpg");
         background-size: cover;
         background-position: center;
         align-items: center;
         justify-content: center;
     }
+
+    #sokBoks {
+        display: flex;
+        flex-direction: row;
+        width: 360px;
+        align-items: center;
+    }
+
+    input {
+        width: 280px;
+        height: 27px;
+        font-family: Calibri;
+        font-size: 23px;
+        color: white;
+        border-radius: 5px;
+        background-color: rgba(0,0,0,0.70);
+        border: solid white 2px;
+    }
+
+    ::placeholder {
+        color: lightgrey;
+        opacity: 1;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 30px;
+        border-radius: 5px;
+        border: solid #2a2859 2px;
+        font-family: Calibri;
+        font-size: 23px;
+        color: white;
+        background-color: #66a4de;
+    }
+
+    button:hover {
+        color: #2a2859;
+        cursor: pointer;
+    }
+
 
     #innpakningFemBokser {
         display: flex;
@@ -142,6 +186,18 @@
         border: solid #2a2859 2px;
     }
 
+    ul {
+        font-family: Calibri;
+        color: #2a2859;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    li:hover {
+        color: #0086ff;
+        cursor: pointer;
+    }
+
     #aktuelt {
         width: 60%;
         height: 100%;
@@ -164,6 +220,30 @@
         width: 250px;
         height: 100%;
         border: solid #2a2859 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        font-family: Calibri;
+        color: #2a2859;
+        font-size: 23px;
+    }
+
+    .sak:hover {
+        cursor: pointer;
+    }
+
+    .aktueltTekst {
+        width: 90%;
+        height: 43%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aktueltTekst:hover {
+        color: #0086ff;
     }
 
     h3 {
@@ -172,10 +252,56 @@
         color: #2a2859;
     }
 
+    .sakBilde {
+        width: 100%;
+    }
+
+    .kilde {
+        position: absolute;
+        font-family: Calibri;
+        color: white;
+        font-size: 13px;
+    }
+
+    #kildeLogo {
+        top: 80px;
+        left: 120px;
+        color: #2d669b;
+    }
+
+    #kildeBarcode {
+        top: 420px;
+        left: 20px;
+    }
+
+    #kildeSak1 {
+        top: 705px;
+        left: 560px;
+    }
+
+    #kildeSak2 {
+        top: 705px;
+        left: 840px;
+    }
+
+    #kildeSak3 {
+        top: 705px;
+        left: 1120px;
+        color: #2a2859;
+    }
+
+
 </style>
 
 <body>
 <div id="innpakning">
+
+    <span class="kilde" id="kildeLogo">karriere, u.å.</span> <!-- https://karriere.no/jobb/bedrift/oslo-kommune-2074235 -->
+    <span class="kilde" id="kildeBarcode">phonero, 2019</span> <!-- https://www.phonero.no/phoneronytt/dark -->
+    <span class="kilde" id="kildeSak1">Vestreng, 2017</span> <!-- https://www.dagsavisen.no/oslo/de-graver-og-graver-1.1031227 -->
+    <span class="kilde" id="kildeSak2">Husøy, 2019</span> <!-- https://www.aftenposten.no/osloby/i/6jyzGo/her-er-de-foerste-bildene-av-de-nye-oslo-trikkene -->
+    <span class="kilde" id="kildeSak3">Lepperød, 2020</span> <!-- https://www.nettavisen.no/nyheter/55-nye-smittetilfeller-i-oslo---hoyt-smittetrykk-i-14-av-15-bydeler/3424022708.html -->
+
     <div id="innpakningMeny">
         <div id="logo"></div>
         <div id="innpakningMenysider">
@@ -185,6 +311,11 @@
         </div>
     </div>
     <div id="innpakningStortBilde">
+        <div id="sokBoks">
+            <input type="text" placeholder="Hva kan vi hjelpe deg med?" name="søk">
+            <button type="submit">Søk</button>
+        </div>
+
         <div id="innpakningFemBokser">
             <div class="enBoks">Kultur, idrett og friluftsliv</div>
             <div class="enBoks">Helse, omsorg og velferd</div>
@@ -209,9 +340,18 @@
             <div id="aktuelt">
                 <h3>Aktuelt</h3>
                 <div id="innpakningSaker">
-                    <div class="sak"></div>
-                    <div class="sak"></div>
-                    <div class="sak"></div>
+                    <div class="sak">
+                        <img class="sakBilde" src="sak1.jpg">
+                        <span class="aktueltTekst">Bygningsarbeidet utsatt på ubestemt tid</span>
+                    </div>
+                    <div class="sak">
+                        <img class="sakBilde" src="sak2.jpg">
+                        <span class="aktueltTekst">Her er de nye trikkene</span>
+                    </div>
+                    <div class="sak">
+                        <img class="sakBilde" src="sak3.jpg">
+                        <span class="aktueltTekst">Oslo kommune er rødt</span>
+                    </div>
                 </div>
             </div>
         </div>
