@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oslo kommune</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    #innpakning {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 890px;
+    }
+
+    #innpakningMeny {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        background-color: #66a4de;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 92%;
+        width: 180px;
+        background-image: url("osloLogo.svg");
+        background-size: cover;
+        margin-left: 20px;
+    }
+
+    #innpakningMenysider {
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+        font-family: Calibri;
+        font-size: 25px;
+        color: #2a2859;
+    }
+
+    .menysider:hover {
+        cursor: pointer;
+        font-weight: bold;
+        margin-right: -3px;
+    }
+
+    .border {
+        border: solid #2a2859 3px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .border:hover {
+        font-weight: bold;
+        border-width: 4px;
+    }
+
+    #kontaktOss:hover {
+        margin-left: -6px;
+    }
+
+    #innpakningStortBilde {
+        width: 100%;
+        height: 340px;
+        display: flex;
+        background-image: url("barcode.jpg");
+        background-size: cover;
+        background-position: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #innpakningFemBokser {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 200px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .enBoks {
+        display: flex;
+        width: 180px;
+        height: 110px;
+        font-family: Calibri;
+        font-size: 23px;
+        background-color: rgba(0,0,0,0.70);
+        color: white;
+        text-align: center;
+        align-items: center;
+        border: solid white 2px;
+    }
+
+    .enBoks:hover {
+        cursor: pointer;
+        background-color: rgba(0,0,0,0.85);
+    }
+
+    #innpakningDel2 {
+        width: 100%;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #innpakningBoks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 90%;
+        height: 85%;
+    }
+
+    #hvaSkjer {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #innpakningListe {
+        width: 100%;
+        height: 290px;
+        border: solid #2a2859 2px;
+    }
+
+    #aktuelt {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #innpakningSaker {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 290px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sak {
+        width: 250px;
+        height: 100%;
+        border: solid #2a2859 2px;
+    }
+
+    h3 {
+        font-family: Calibri;
+        font-size: 22px;
+        color: #2a2859;
+    }
+
+</style>
+
+<body>
+<div id="innpakning">
+    <div id="innpakningMeny">
+        <div id="logo"></div>
+        <div id="innpakningMenysider">
+            <span class="menysider">Om kommunen</span>
+            <span class="menysider, border" >Lytt til tekst</span>
+            <span class="menysider, border" id="kontaktOss">Kontakt oss</span>
+        </div>
+    </div>
+    <div id="innpakningStortBilde">
+        <div id="innpakningFemBokser">
+            <div class="enBoks">Kultur, idrett og friluftsliv</div>
+            <div class="enBoks">Helse, omsorg og velferd</div>
+            <div class="enBoks">Skole og barnehage</div>
+            <div class="enBoks">Eiendom og landbruk</div>
+            <div class="enBoks">Politikk og samfunn</div>
+        </div>
+    </div>
+    <div id="innpakningDel2">
+        <div id="innpakningBoks">
+            <div id="hvaSkjer">
+                <h3>Hva skjer i Oslo kommune?</h3>
+                <div id="innpakningListe">
+                    <ul>
+                        <li>Noe</li>
+                        <li>Noe</li>
+                        <li>Noe</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="aktuelt">
+                <h3>Aktuelt</h3>
+                <div id="innpakningSaker">
+                    <div class="sak"></div>
+                    <div class="sak"></div>
+                    <div class="sak"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
