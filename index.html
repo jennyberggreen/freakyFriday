@@ -203,6 +203,14 @@
         cursor: pointer;
     }
 
+    .liste {
+        color: #2a2859;
+    }
+
+    .liste:hover {
+        color: #0086ff;
+    }
+
     #aktuelt {
         width: 60%;
         height: 100%;
@@ -229,10 +237,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        text-align: center;
-        font-family: Calibri;
-        color: #2a2859;
-        font-size: 23px;
+
     }
 
     .sak:hover {
@@ -240,11 +245,15 @@
     }
 
     .aktueltTekst {
-        width: 90%;
-        height: 43%;
+        width: 100%;
+        height: 122px;
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+        font-family: Calibri;
+        color: #2a2859;
+        font-size: 23px;
     }
 
     .aktueltTekst:hover {
@@ -337,9 +346,9 @@
                 <h3>Hva skjer i Oslo kommune?</h3>
                 <div id="innpakningListe">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus convallis nunc.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus convallis nunc.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus convallis nunc.</li>
+                        <li><a href="somewhere.html" class="liste">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus convallis nunc.</a></li>
+                        <li><a href="somewhere.html" class="liste">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus convallis nunc.</a></li>
+                        <li><a href="somewhere.html" class="liste">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus convallis nunc.</a></li>
                     </ul>
                 </div>
 
@@ -349,15 +358,15 @@
                 <div id="innpakningSaker">
                     <div class="sak">
                         <img class="sakBilde" src="sak1.jpg">
-                        <span class="aktueltTekst">Bygningsarbeidet utsatt på ubestemt tid</span>
+                        <span><a href="somewhere.html" class="aktueltTekst">Bygningsarbeidet utsatt <br> på ubestemt tid</a></span>
                     </div>
                     <div class="sak">
                         <img class="sakBilde" src="sak2.jpg">
-                        <span class="aktueltTekst">Her er de nye trikkene</span>
+                        <span><a href="somewhere.html" class="aktueltTekst">Her er de nye trikkene</a></span>
                     </div>
                     <div class="sak">
                         <img class="sakBilde" src="sak3.jpg">
-                        <span class="aktueltTekst">Oslo kommune er rødt</span>
+                        <span><a href="somewhere.html" class="aktueltTekst">Oslo kommune er rødt</a></span>
                     </div>
                 </div>
             </div>
