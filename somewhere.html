@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Somewhere</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    #innpakning {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 890px;
+    }
+
+    #innpakningMeny {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        background-color: #93c9fc;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 5px 5px 20px rgba(93, 90, 90, 0.7);
+        z-index: 3;
+    }
+
+    #linkLogo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+
+    #logo {
+        width: 180px;
+        height: 92%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #innpakningMenysider {
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+
+    }
+
+    .menysider {
+        font-family: Calibri;
+        font-size: 25px;
+        color: #2a2859;
+    }
+
+    .menysider:hover {
+        cursor: pointer;
+        color: white;
+    }
+
+    .border {
+        border: solid #2a2859 3px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .border:hover {
+        border-color: white;
+    }
+
+    #main {
+        width: 100%;
+        height: 790px;
+    }
+
+</style>
+
+<body>
+
+<div id="innpakning">
+    <div id="innpakningMeny">
+        <a href="index.html" id="linkLogo">
+            <img src="osloLogo.svg" alt="" id="logo">
+        </a>
+        <div id="innpakningMenysider">
+            <span><a href="somewhere.html" class="menysider">Om kommunen</a></span>
+            <span><a href="somewhere.html" class="menysider border">Lytt til tekst</a></span>
+            <span><a href="somewhere.html" class="menysider border" id="kontaktOss">Kontakt oss</a></span>
+        </div>
+    </div>
+    <div id="main">
+        <h1>Page to somewhere</h1>
+    </div>
+
+</div>
+
+</body>
+</html>

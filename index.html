@@ -29,15 +29,20 @@
         z-index: 3;
     }
 
-    #logo {
+    #linkLogo {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 92%;
-        width: 180px;
-        background-image: url("osloLogo.svg");
-        background-size: cover;
         margin-left: 20px;
+    }
+
+    #logo {
+        width: 180px;
+        height: 92%;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     #innpakningMenysider {
@@ -48,6 +53,10 @@
         align-items: center;
         justify-content: space-between;
         margin-right: 20px;
+
+    }
+
+    .menysider {
         font-family: Calibri;
         font-size: 25px;
         color: #2a2859;
@@ -55,8 +64,7 @@
 
     .menysider:hover {
         cursor: pointer;
-        font-weight: bold;
-        margin-right: -3px;
+        color: white;
     }
 
     .border {
@@ -66,12 +74,7 @@
     }
 
     .border:hover {
-        font-weight: bold;
-        border-width: 4px;
-    }
-
-    #kontaktOss:hover {
-        margin-left: -6px;
+        border-color: white;
     }
 
     #innpakningStortBilde {
@@ -305,11 +308,13 @@
     <span class="kilde" id="kildeSak3">Lepperød, 2020</span> <!-- https://www.nettavisen.no/nyheter/55-nye-smittetilfeller-i-oslo---hoyt-smittetrykk-i-14-av-15-bydeler/3424022708.html -->
 
     <div id="innpakningMeny">
-        <div id="logo"></div>
+        <a href="index.html" id="linkLogo">
+            <img src="osloLogo.svg" alt="" id="logo">
+        </a>
         <div id="innpakningMenysider">
-            <span class="menysider">Om kommunen</span>
-            <span class="menysider, border" >Lytt til tekst</span>
-            <span class="menysider, border" id="kontaktOss">Kontakt oss</span>
+            <span><a href="somewhere.html" class="menysider">Om kommunen</a></span>
+            <span><a href="somewhere.html" class="menysider border">Lytt til tekst</a></span>
+            <span><a href="somewhere.html" class="menysider border" id="kontaktOss">Kontakt oss</a></span>
         </div>
     </div>
     <div id="innpakningStortBilde">
@@ -319,11 +324,11 @@
         </div>
 
         <div id="innpakningFemBokser">
-            <div class="enBoks">Kultur, idrett og friluftsliv</div>
-            <div class="enBoks">Helse, omsorg og velferd</div>
-            <div class="enBoks">Skole og barnehage</div>
-            <div class="enBoks">Eiendom og landbruk</div>
-            <div class="enBoks">Politikk og samfunn</div>
+            <a href="somewhere.html"><div class="enBoks">Kultur, idrett og friluftsliv</div></a>
+            <a href="somewhere.html"><div class="enBoks">Helse, omsorg og velferd</div></a>
+            <a href="somewhere.html"><div class="enBoks">Skole og barnehage</div></a>
+            <a href="somewhere.html"><div class="enBoks">Eiendom og landbruk</div></a>
+            <a href="somewhere.html"><div class="enBoks">Politikk og samfunn</div></a>
         </div>
     </div>
     <div id="innpakningDel2">
